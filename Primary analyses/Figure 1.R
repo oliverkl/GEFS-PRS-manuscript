@@ -1,3 +1,7 @@
+library(ggpubr)
+library(ggridges)
+library(patchwork)
+
 # Figure 1
 
 # Ridges plot of score distributions
