@@ -25,7 +25,6 @@ comp01.orig <- orig.mod["as.factor(sev_diff)yes", "Estimate"]
 data.frame("comp01" = orig.mod["as.factor(sev_diff)yes", "Estimate"])
 
 # Rerun the test on a new shuffled data set
-# at 10,000 iterations this takes too to run....
 start <- Sys.time()
 
 # set seed to ensure result reproducible
@@ -103,7 +102,6 @@ data.frame("comp01" = orig.mod["as.factor(diff_group)1", "Estimate"],
            "comp04" = orig.mod["as.factor(diff_group)4", "Estimate"])
 
 # Rerun the test on a new shuffled data set
-# at 100,000 iterations this takes too to run....
 start <- Sys.time()
 
 # set seed to ensure result reproducible
