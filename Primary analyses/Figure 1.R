@@ -31,9 +31,6 @@ p1 <- ggplot(gefsplus_database_nocntrl, aes(x = `allEpi3_0.5.norm`, y = Epilepsy
   ) +
   guides(fill = guide_legend(reverse = TRUE)) + guides(color = guide_legend(reverse = TRUE))
 
-
-p1
-
 p2 <- gefsplus_database %>%  
   filter(severity %in% c(1,2,3,4,5)) %>% 
   ggerrorplot(x = "outcome2", y = "allEpi3_0.5.norm", desc_stat = "mean_ci", size = 0.8, color = "outcome2",
@@ -60,8 +57,6 @@ p2 <- gefsplus_database %>%
   geom_signif(comparisons = list(c(1,2)), annotations = "list(italic(Padj)~'='~0.04)", parse = TRUE, y_position = 0.55, tip_length = 0.004, color = "black", family = "URWHelvetica", textsize = 2.5) + 
   geom_hline(yintercept=0, linetype = "solid", 
                 color = "black", linewidth=0.8)
-
-p1 + ggpar(p2, ylim = c(-0.15, 0.65), ticks = FALSE)
 
 tiff("Fig1_GEFS+_PRS.tiff", units="cm", width=17, height=7, res=300)
 p1 + ggpar(p2, ylim = c(-0.15, 0.65), ticks = FALSE)
