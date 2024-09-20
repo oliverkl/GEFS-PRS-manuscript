@@ -40,7 +40,7 @@ p2 <- gefsplus_database %>%
   ggerrorplot(x = "outcome2", y = "allEpi3_0.5.norm", desc_stat = "mean_ci", size = 0.8, color = "outcome2",
               order = c("0", "1")) +
   ggtitle("B") +
-  labs(y = "PRS mean +/- 95% CI", x = " ") +
+  labs(y = "PRS mean (95% CI)", x = " ") +
   theme_minimal() +
   scale_fill_manual(values = c("black", "coral3")) +
   scale_color_manual(values = c("black", "coral3")) +
